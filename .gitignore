@@ -1,0 +1,12 @@
+
+*.pyc
+*.log
+.env*
+venv/
+email.yaml
+.vscode
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
