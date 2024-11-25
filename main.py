@@ -6,9 +6,11 @@ import uvicorn
 from src.db import models
 from src.db.database import engine
 from src.routers import login, email, users
+from src.logs.logging_config import setup_logging
 
 
 logging.getLogger('passlib').setLevel(logging.ERROR) #silences a warning between passlib and bcrypt
+setup_logging()
 
 models.Base.metadata.create_all(bind=engine)
 
